@@ -1,6 +1,6 @@
 import React from 'react';
 import {createBrowserRouter}  from 'react-router-dom'
-import Index from "./pages";
+import Index from "./pages/Index";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
