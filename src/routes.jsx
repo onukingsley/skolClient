@@ -12,6 +12,14 @@ import Payment from "./pages/studentDashboard/Payment";
 import Subject from "./pages/studentDashboard/Subject";
 import TimeTable from "./pages/studentDashboard/TimeTable";
 import StudentLayout from "./layout/student_layout";
+import ResultForm from "./pages/studentDashboard/ResultForm";
+import StaffAssignment from "./pages/staffDashboard/Assignment.jsx";
+import StaffIndex from "./pages/staffDashboard/Index.jsx";
+import SalaryPayment from "./pages/staffDashboard/SalaryPayment.jsx";
+import ClassManagement from "./pages/staffDashboard/ClassManagement.jsx";
+import StaffSubject from "./pages/staffDashboard/Subject.jsx";
+import StaffTimeTable from "./pages/staffDashboard/TimeTable.jsx";
+import StaffLayout from "./layout/staff_layout.jsx";
 
 const router = createBrowserRouter([
 
@@ -38,7 +46,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'result' ,
-                element: <CheckResult/>,
+                element: <ResultForm/>,
 
             },
             {
@@ -57,6 +65,40 @@ const router = createBrowserRouter([
 
             }
         ]
+    },
+    {
+      path: '/staff',
+      element: <StaffLayout/>,
+      children: [
+          {
+              path: ':id',
+              element: <StaffIndex/>
+          },
+          {
+              path: 'assignment',
+              element: <StaffAssignment/>
+          },
+          {
+              path: 'salary',
+              element: <SalaryPayment/>
+          },
+          {
+              path: 'classManagement',
+              element: <ClassManagement/>
+          },
+          {
+              path: 'staffSubject',
+              element: <StaffSubject/>,
+          },
+          {
+              path: 'staffTimetable',
+              element: <StaffTimeTable/>
+          },
+          {
+              path: 'subjectReview',
+              element: <StaffTimeTable/>
+          }
+      ]
     },
 
 
